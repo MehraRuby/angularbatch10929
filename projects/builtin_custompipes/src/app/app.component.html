@@ -1,0 +1,29 @@
+<!--
+Pipe are the predefined simple functions used to format the output or values on browser
+These are built in or we can customize pipes as per requirements also.
+Type:
+1: pure pipes (by default) -> till the time argument will get effected and will be
+                              same throughout then referred as pure pipe
+2: impure pipe -> these pipes are customize and parameter are mutable(can change)
+
+syntax:
+         |  to call a pipe
+         :  tp pass a parameter
+
+-->
+<h1> Built-In Pipes </h1>
+Current Date : {{ dt }} <br>
+Format Current Date : {{ dt | date }} <br>
+Format Current Date : {{ dt | date:'dd-MM-yyyy'}}<br>
+
+FirstName : {{ firstname | uppercase }}<br>
+LastName : {{ lastname | lowercase }}<br>
+
+Currency : {{ 100 | currency}} <br>
+Currency : {{ 100 | currency:'EUR'}} <br>  <!--currency:'EUR'  is a parameter in pipes -->
+
+<h1> Custom Pipes </h1>
+
+Name :{{ firstname | roundpipe:true}} <br>
+
+PowerOf : {{3 | powerof:4 }}

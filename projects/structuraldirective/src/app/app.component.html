@@ -1,0 +1,45 @@
+
+<!-- Example 1
+
+<div class="container m-3 p-3">
+  <input type="checkbox" name="ck" [(ngModel)]="ck"/> Toggle On/Off
+
+  <div class="m-3 p-3">
+
+    <ng-template [ngIf]="ck">
+        <app-comp1></app-comp1>
+    </ng-template>
+
+    <ng-template [ngIf]="!ck">
+        <app-comp2></app-comp2>
+    </ng-template>
+
+
+  </div>
+</div>
+
+-->
+
+<!-- Example 2-->
+
+
+<div class="container m-3 p-3">
+    <div class="d-flex">
+        <button class="nav-link text-danger" (click)="getOn()"> About Us </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="nav-link text-danger" (click)="getOff()"> Contact </button>
+    </div>
+
+    <div class="m-3 p-3">
+
+    <ng-template [ngIf]="toggle">
+        <app-comp1></app-comp1>
+    </ng-template>
+
+    <ng-template [ngIf]="!toggle">
+        <app-comp2></app-comp2>
+    </ng-template>
+
+
+  </div>
+</div>
+

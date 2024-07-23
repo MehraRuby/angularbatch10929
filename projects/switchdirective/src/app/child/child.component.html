@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+  <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Snow" style="width:100%;height:400px;">
+  <div class="centered text-white pacifico-regular d-relative">
+    <div><span>Frosted Fancies</span></div><br><br>
+    <div class="ps-5"><span>Where Delicious Dreams Come True</span></div>
+    </div>
+</div>
+<div class="container">
+<nav class="navbar  navbar-expand-lg">
+ <div class="container">
+   <a class="navbar-brand" href="#">ProjectIcon</a>
+   <div class="collapse navbar-collapse " id="navbarNav">
+     <ul class="navbar-nav">
+       <li class="nav-item">
+         <button class="nav-link" (click)="getHome()" >Home</button>
+       </li>
+       <li class="nav-item">
+         <button class="nav-link" (click)="getAbout()">About</button>
+       </li>
+       <li class="nav-item">
+         <button class="nav-link" (click)="getContact()" >Contact</button>
+       </li>
+
+
+
+     </ul>
+   </div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <form class="d-flex" role="search">
+     <button class="nav-link" (click)="getLogin()" >Login</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <button class="nav-link" (click)="getCart()" >Cart</button>
+   </form>
+
+ </div>
+</nav>
+</div>
+
+
+<div class="container m-3 p-3">
+   <div [ngSwitch]="val">
+         <div *ngSwitchCase="0"> <app-home></app-home>  </div>
+         <div *ngSwitchCase="1"> <app-aboutus></app-aboutus>  </div>
+         <div *ngSwitchCase="2"> <app-contact> </app-contact> </div>
+         <div *ngSwitchCase="3"> <app-login></app-login>  </div>
+         <div *ngSwitchCase="4"> <app-cart></app-cart>  </div>
+         <div *ngSwitchDefault> <app-home></app-home>  </div>
+   </div>
+</div>
+
+
+

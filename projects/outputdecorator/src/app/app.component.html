@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="row">
+
+        <div class="col-4">
+
+              <app-addproduct (myevent)="getValue($event)"></app-addproduct>
+
+        </div>
+
+        <div class="col-8">
+
+          @for(a of prdt ; track a )
+          {
+              <div class="border m-3" [ngStyle]="{'background-color':getColor(a.pid)}" >
+                {{a.pid}}
+                <div [ngClass]="
+                {
+                          'text-success':a.pnm ==='pen',
+                          'text-danger':a.pnm ==='pencil',
+                          'text-warning':a.pnm === 'notebook',
+                          'text-light':a.pnm === 'laptop',
+                }">
+                     {{a.pnm}} - <button class="btn btn-warning" (click)="remove(a)"> Delete </button></div>
+              </div>
+          }
+
+
+        </div>
+
+
+  </div>
+
+
+
+</div>

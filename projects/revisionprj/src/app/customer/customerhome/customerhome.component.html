@@ -1,0 +1,26 @@
+<p>customerhome works!</p>
+
+
+
+<ul *ngFor="let a of prdt | paginate: { itemsPerPage: count, currentPage: p }">
+  <li>
+
+    {{a.prnm}} - {{a.price}} - <img src="data:image/*;base64,{{a.pic}}" height="50" width="50" style="border-radius: 50%;">
+
+  <button (click)="passid(a)"> Add to cart </button>
+
+  </li>
+
+
+</ul>
+
+
+<div class="text-right">
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>
+
+
+<hr>
+
+<app-cartcomp [cartdata]="cart" (delprdt)="delproduct($event)"></app-cartcomp>
+<h1>Total : {{tot}}</h1>

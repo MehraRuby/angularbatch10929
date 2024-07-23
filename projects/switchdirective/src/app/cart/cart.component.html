@@ -1,0 +1,22 @@
+<div>
+  <hr>
+  <h1 class="text-center"> {{msg}} </h1>
+  <hr>
+  <table class="table table-responsive">
+    <tr *ngFor="let a of cart">
+        <td><img src="data:image/*;base64,{{a.pic}}" height="40" width="40"></td>
+        <td>{{a.prnm}}</td>
+        <td>{{a.price}}</td>
+
+        <td><button  class="btn btn-danger" (click)="deletecart(a)" aria-label="Example icon button with a delete icon">
+          Delete
+        </button></td>
+    </tr>
+  </table>
+  <hr>
+  <span><strong>Total : Rs. {{tot}}</strong></span>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button type="button" class="btn btn-success" aria-label="Order Now" (click)="orderitems()" id="btnord"> Order Now </button>
+
+</div>

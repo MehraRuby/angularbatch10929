@@ -1,0 +1,17 @@
+<hr>
+<H1> Cart Details </H1>
+<hr>
+
+
+
+<ul *ngFor="let a of cartdata">
+  <li>
+
+    {{a.prnm}} - {{a.price}} - <img src="data:image/*;base64,{{a.pic}}" height="50" width="50" style="border-radius: 50%;">
+
+<button class="btn btn-primary" (click)="del(a)"> Delete  </button>
+
+  </li>
+
+
+</ul>

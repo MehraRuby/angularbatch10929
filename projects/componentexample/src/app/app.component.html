@@ -1,0 +1,35 @@
+<div id="dv">
+{{ title }}
+</div>
+
+<br>
+<br>
+
+<div class="container text-center bg-primary">
+
+One way binding : {{ username }}
+
+</div>
+
+<br>
+<br>
+
+<div class="container">
+
+  <!-- for fetching the dynamic data and assign that property here in html to fetch property's value , we will use property binding -->
+  <img [src]="path" height="200" width="200"/>
+
+  <br>
+  <br>
+
+  <!-- click event get bind with function declared in ts file, process is called event binding-->
+  <button (click)="sayHello()" class="btn btn-success"> Submit  </button>
+
+
+  <br>
+  <br>
+
+  <!-- import FormsModule locally to this component. ngModel assign data to property and vice-versa-->
+  <input type="text" placeholder="UserName" name="usr" [(ngModel)]="usr"/>
+
+</div>

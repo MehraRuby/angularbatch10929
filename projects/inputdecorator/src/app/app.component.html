@@ -1,0 +1,22 @@
+<!-- Parent to child -->
+<!-- child takes the input and demonstrates the values-->
+<!-- @Input decorator will be assigned at Child's component's end-->
+<!-- Use property binding on parent component to send the data to child-->
+
+
+<div class="container">
+  <div>
+      <form class="form-group">
+          Enter Database Name : <input type="text" class="form-control" name="database" [(ngModel)]="database"/>
+      </form>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="container">
+
+  <!-- property binding - bind db property of child with database property of parent-->
+  <app-child [db]="database"></app-child>
+
+</div>
